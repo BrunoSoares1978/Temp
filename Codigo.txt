@@ -1,0 +1,30 @@
+
+
+package application;
+import java.util.Scanner;
+import java.util.Locale;
+import entities.exercicios02;
+public class Program {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner (System.in);
+		Locale.setDefault(Locale.US);
+		exercicios02 exercicios02 = new exercicios02();
+		System.out.println("digite o nome do funcionário");
+		exercicios02.nome = sc.nextLine();
+		System.out.println("digite o salario bruto: ");
+		exercicios02.salarioBruto = sc.nextDouble();
+		System.out.println("Digite o valor do imposto");
+		exercicios02.imposto = sc.nextDouble();
+		System.out.println();		
+		System.out.println("O nome do funcionario: " + exercicios02.nome);
+		System.out.println("O salario bruto do funcionario: " + String.format("R$ %.2f", exercicios02.salarioBruto));
+		System.out.println("O imposto a pagar sobre o salario: " + String.format("R$ %.2f",exercicios02.imposto));
+		System.out.println("Dados do funcionário: " + exercicios02.nome + " - Salario Líquido: " + String.format("R$ %.2f", exercicios02.calculoSalario()));
+		System.out.println();
+		System.out.println("Digite o percentual: ");
+		double percentual = sc.nextDouble();
+		exercicios02.calculaOAcrescimoDoPercentual(percentual);
+		System.out.println(exercicios02.calculaOAcrescimoDoPercentual());
+		sc.close();
+	}
+}

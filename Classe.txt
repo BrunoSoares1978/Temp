@@ -1,0 +1,16 @@
+=Classes=
+package entities;
+public class exercicios02 {
+	public String nome;
+	public double salarioBruto;
+	public double imposto;
+	public double calculoSalario() {
+		return salarioBruto - imposto; 
+	}
+	public void calculaOAcrescimoDoPercentual(double percentual) {
+		double calculo;
+		calculo = salarioBruto * percentual / 100;
+		calculo = calculoSalario() + calculo;
+	}
+}
+
